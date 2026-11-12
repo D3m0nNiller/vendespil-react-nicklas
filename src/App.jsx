@@ -87,44 +87,52 @@ export default function App() {
   }, [])
 
   return (
-    <div>
-      <h1>Memory Game</h1>
-
+    <>
       <div>
-        <label>Number of pairs:</label>
+        <h1>Memory Game</h1>
 
-        <input
-          type="number"
-          min="1"
-          value={numberOfPairs}
-          onChange={(event) => setNumberOfPairs(event.target.value)}
-        />
+        <div>
+          <label>Number of pairs:</label>
 
-        <button onClick={() => createCards(Number(numberOfPairs))}>
-          Start Game
-        </button>
-      </div>
+          <input
+            type="number"
+            min="1"
+            value={numberOfPairs}
+            onChange={(event) => setNumberOfPairs(event.target.value)}
+          />
+        </div>
 
-      <div>
-        <h2>Scoreboard</h2>
+        <div id="scoreboard">
+          <h2>Scoreboard</h2>
 
-        <p>Moves: {moves}</p>
+          <p>Moves: {moves}</p>
 
-        <p>
-          Pairs found: {matchedCards.length / 2} / {cards.length / 2}
-        </p>
+          <p>
+            Pairs found: {matchedCards.length / 2} / {cards.length / 2}
+          </p>
+        </div>
 
         {matchedCards.length === cards.length && cards.length > 0 && (
           <h2>You won!</h2>
         )}
-      </div>
 
-      <CardList
-        cards={cards}
-        selectedCards={selectedCards}
-        matchedCards={matchedCards}
-        handleClick={handleClick}
-      />
-    </div>
+
+        <CardList
+          cards={cards}
+          selectedCards={selectedCards}
+          matchedCards={matchedCards}
+          handleClick={handleClick}
+        />
+      </div >
+
+      {matchedCards.length === cards.length ?
+        <button onClick={() => createCards(Number(numberOfPairs))}>
+          Reset Game Or Choose Another Amount Of Pairs
+        </button> :
+        <button onClick={() => createCards(Number(numberOfPairs))}>
+          Start Game
+        </button>
+      }
+    </>
   )
 }

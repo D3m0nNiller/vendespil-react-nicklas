@@ -7,13 +7,10 @@
 }
 
 #cards {
-  margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  max-width: 600px;
+  max-width: min-content;
   margin: 0 auto;
-
 }
 
 .card {
@@ -68,4 +65,15 @@
   background-color: green;
   color: white;
   font-size: 200%;
+}
+
+#scoreboard {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #f18034;
+  padding: 2em;
+  align-content: center;
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
 }
