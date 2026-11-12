@@ -77,3 +77,7 @@
   border-top-left-radius: 1em;
   border-bottom-left-radius: 1em;
 }
+
+button {
+  text-transform: capitalize;
+}

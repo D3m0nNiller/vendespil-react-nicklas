@@ -127,10 +127,10 @@ export default function App() {
 
       {matchedCards.length === cards.length ?
         <button onClick={() => createCards(Number(numberOfPairs))}>
-          Reset Game Or Choose Another Amount Of Pairs
+          Reset game or choose another amount of pairs
         </button> :
         <button onClick={() => createCards(Number(numberOfPairs))}>
-          Start Game
+          Start game
         </button>
       }
     </>
