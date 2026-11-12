@@ -6,7 +6,7 @@ export default function CardList({ cards, selectedCards, matchedCards, handleCli
         <ul
             id="cards"
             style={{
-                gridTemplateColumns: `repeat(${Math.min(cards.length / 2, 4)}, 1fr)`
+                gridTemplateColumns: `repeat(${Math.min(cards.length / 2, 5)}, 1fr)`
             }}
         >
             {cards.map((card) => (
