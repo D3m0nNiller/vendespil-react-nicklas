@@ -9,7 +9,7 @@ export default function Card({ card, selectedCards, matchedCards, handleClick })
             onClick={() => handleClick(card)}
         >
             <span className="front">Card</span>
-            <span className="back">{card.value}</span>
+            <span className="back">{card.value + 1}</span>
         </li>
     )
 }
