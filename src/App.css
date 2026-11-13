@@ -80,4 +80,9 @@
 
 button {
   text-transform: capitalize;
+  border: none;
+  padding: 1em;
+  background-color: #f18034;
+  border-radius: 2em;
+  cursor: pointer;
 }
